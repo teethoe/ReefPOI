@@ -53,7 +53,6 @@ class Process:
         for i in range(4):
             distances = [math.dist(pt, ref[i]) for pt in points]
             maxComb[i] = points[np.argmin(distances)]
-        print(maxComb)
 
         trans = transform(self.img, maxComb)
 

@@ -18,10 +18,6 @@ planter = rf.planter()
 coral = rf.coral()
 star = rf.star()
 sponge = rf.sponge()
-print(planter)
-print(coral)
-print(star)
-print(sponge)
 
 grid = np.zeros([300, 900, 3], dtype=np.uint8)
 grid[:] = 255
@@ -43,6 +39,7 @@ for pos in star:
 
 grid = cv2.ellipse(grid, (coral[0]*100, coral[1]*100+50), (90, 40), 0, 0, 360, (36, 28, 237), 4)
 grid = cv2.circle(grid, [sponge[i]*100+50 for i in range(2)], 40, (76, 177, 34), 4)
+
 
 cv2.imshow('reef', reef)
 cv2.imshow('grid', grid)
